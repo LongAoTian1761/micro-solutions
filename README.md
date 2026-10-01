@@ -1,28 +1,36 @@
-# 国际宏观经济学 · 课后题与解答
+# 经济学的思维方式 · 课后讨论题与同学解答
 
-课程教材：**Schmitt-Grohé, Uribe & Woodford, _International Macroeconomics_**（2021 年 5 月 25 日草稿版）。
-网站收录了 **15 章、161 道课后题**，分为书中的四个部分。
+课程教材：**Heyne, Boettke & Prychitko, _The Economic Way of Thinking_, 13th ed.**
+（中译本《经济学的思维方式》第 13 版）
 
-一个可以直接部署到 GitHub Pages 的网站：教师维护每道习题的题目与参考思路，
-**同学打开网页填完就能提交作业 —— 不需要注册、不需要登录、不需要任何账号**，
-答案连同附件一起存下来，并展示在对应习题页面。
+网站收录 **16 章、300 道**课后讨论题（Questions for Discussion），中英对照。
+同学打开网页填完就能提交 —— 不需要注册、不需要登录，答案和附件一起存下来，
+展示在对应题目页。
 
-> 第一次上手？直接照着 [GO-LIVE.md](GO-LIVE.md) 一步步做就行 ——
-> 那是一份按顺序排好的上线清单，含验收步骤和排错表。
+- 线上地址：https://longaotian1761.github.io/micro-solutions/
+- 代码仓库：https://github.com/LongAoTian1761/micro-solutions
 
-```
-首页（按四个部分列出 15 章）  →  章节页  →  习题页（题目 / 参考思路 / 同学作业 / 上传入口）
-                  ↘ 全部作业墙（可搜索、可筛选）
-```
+## 双语是怎么做的
+
+每道题在 `data/course.json` 里存两份题面：`problem`（英文，取自原版 PDF）
+与 `problemZh`（中文，取自中译本）。页面把两份都写进 HTML，靠 `<html data-lang-mode>`
+属性决定显示哪份，所以切换是瞬时的、不重新请求。
+
+界面右上角三个按钮：**中文 / English / 中英对照**，选择记在浏览器 localStorage，
+首次绘制前就生效，不会闪。
+
+题面是自动提取的，复杂公式、上下标可能有偏差，**以教材为准**。
+发现错误改 `data/course.json` 重新构建即可。
 
 ## 三步接入接收服务器
 
 同学端之所以能做到「零账号」，是因为答案和附件直接写进 Supabase
-（免费额度足够一个班用很多年）。你只需要配置一次，大约 5 分钟。
+（免费额度足够一个班用很多年）。配置一次，大约 5 分钟。
 
 **第一步**　到 [supabase.com](https://supabase.com) 注册（免费），新建一个 Project。
+本项目用**独立的 Supabase 项目**，不要和《国际宏观经济学》那个站共用。
 
-**第二步**　左侧 **SQL Editor → New query**，把 [`supabase/schema.sql`](supabase/schema.sql)
+**第二步**　左侧 **SQL Editor → New Query**，把 [`supabase/schema.sql`](supabase/schema.sql)
 整个文件粘贴进去，点 **Run**。它会建好表、权限和存放附件的存储桶。
 
 **第三步**　左侧 **Project Settings → API**，复制两个值填进 `data/course.json`：
@@ -32,7 +40,7 @@
   "backend": "supabase",
   "supabase": {
     "url": "https://xxxxxxxxxxxx.supabase.co",
-    "anonKey": "eyJhbGciOi...",
+    "anonKey": "sb_publishable_...",
     "table": "submissions",
     "bucket": "answer-uploads",
     "maxFileMb": 20,
@@ -47,18 +55,18 @@
 npm run build
 ```
 
-想确认真的通了，跑一次体检脚本：
+体检：
 
 ```bash
 node scripts/check-backend.mjs
 ```
 
-它会用**和浏览器完全相同的公钥**逐项验证：能不能匿名提交、能不能传附件、
-有没有把整张表暴露出去、有没有办法绕过前端给自己「加精」。全绿就说明同学可以用了。
+它用和浏览器完全相同的公钥逐项验证：能否匿名提交、能否传附件、有没有把整张表
+暴露出去、有没有办法绕过前端给自己「加精」。全绿就说明同学可以用了。
 
-> `anonKey` 本来就是设计成公开的，写进网页没有安全问题——真正拦人的是
-> `schema.sql` 里的行级权限（RLS）。**绝对不要**把 `service_role` key 写进网页，
-> 那个只在你自己的电脑或 CI 上用。
+> `anonKey` 本来就是公开的，写进网页没有安全问题 —— 真正拦人的是 `schema.sql`
+> 里的行级权限（RLS）。**绝对不要**把 `service_role` key 写进网页，
+> 那个只在你自己的电脑上用。
 
 ### 不想注册 Supabase，只想先看看效果
 
@@ -69,231 +77,111 @@ npm run mock-backend        # 本地假后端 → http://localhost:4174
 $env:SUPABASE_URL="http://localhost:4174"
 $env:SUPABASE_ANON_KEY="local-test-key-000000000000000000"
 npm run build
-npm run dev                 # 打开 /submit.html 试一次真实上传
 ```
-
-（macOS / Linux 用 `SUPABASE_URL=... SUPABASE_ANON_KEY=... npm run build`。）
-数据只存在内存里，进程一停就没了，纯粹用来演示「免账号直接上传」这条路。
 
 ## 同学是怎么交作业的
 
-| 步骤 | 同学看到的 | 背后发生的事 |
-| --- | --- | --- |
-| 1 | 打开 `/submit.html`，选习题、填姓名、写答案正文 | 下方实时预览公式排版效果 |
-| 2 | 把手写照片、PDF、代码拖进附件框 | 文件在浏览器里排队，还没上传 |
-| 3 | 点「提交我的答案」 | 附件直传存储桶，答案写入数据库，全程无需账号 |
-| 4 | 看到「提交成功」和一行提交编号 | `autoApprove: true` 时立刻出现在习题页与作业墙 |
+1. 打开「上传答案」，选习题编号、填姓名（可填「匿名」）、写正文 —— 支持 Markdown 与 LaTeX
+2. 需要的话把图表、手写照片、PDF、代码拖进附件框，单个 20 MB 以内
+3. 点提交，答案立刻出现在对应题目页的「同学答案」里
+4. 写错了不用慌：提交页下方「我的提交」里可以随时修改或撤回
 
-整条路径没有注册、没有登录、没有邮箱验证。同学填的是「姓名或昵称」，
-填「匿名」就不会公开显示姓名；班级 / 学号只存进数据库，页面上不展示。
+图片和 PDF 会**直接显示**在解答里，不会被藏在一个下载链接后面。
+正文里写 `![说明](fig.png)`，只要附件里有同名文件，会自动换成上传后的地址。
 
-### 三种后端，随时可换
+## 教师 / 管理员操作
 
-改 `data/course.json` → `site.submission.backend`：
+### 1. 改站点信息
 
-| 取值 | 同学体验 | 适用场景 |
-| --- | --- | --- |
-| `supabase`（默认） | 零账号，填完直接上传 | 正常收作业 |
-| `github` | 跳转到预填好的 GitHub Issue 表单 | 同学普遍有 GitHub 账号 |
-| `local` | 只生成 Markdown，不联网 | 完全不想用服务器 |
+编辑 `data/course.json` 顶部的 `site`：
 
-不管用哪一种，`submit.html` 上的「复制 Markdown / 下载 .md / 暂存到本机」始终可用，
-所以线下收作业（微信、邮件、课程平台）永远不会被堵死。
-
-## 快速开始
-
-```bash
-cd open-economy-solutions
-npm run preview        # 生成页面 + 启动本地预览 → http://localhost:4173
+```json
+"site": {
+  "title": "The Economic Way of Thinking",
+  "titleZh": "经济学的思维方式 · 课后讨论题与同学解答",
+  "subtitle": "Heyne, Boettke & Prychitko, 13th ed.",
+  "description": "……",
+  "repo": "LongAoTian1761/micro-solutions",
+  "showProblemText": true,
+  "submission": { "…": "见上文" }
+}
 ```
 
-只重新生成页面：
+`repo` 填了真实仓库地址后，导航栏的「讨论区」（指向 GitHub Issues）和页脚的
+「GitHub 仓库」才会出现；留空或写成 `your-github-name/...` 时这两处直接不渲染。
 
-```bash
-npm run build
-```
+`showProblemText: false` 可以关掉题面展示，只留提交框。
 
-没有构建依赖，只需要 Node 18+。`build` 把 `data/*.json` 渲染成完整静态站点，
-直接双击 `index.html` 也能看（公式需要联网加载 MathJax）。
+### 2. 改题面 / 补参考思路
+
+每道题在 `chapters[].exercises[]` 里，字段：
+
+| 字段 | 说明 |
+| --- | --- |
+| `id` | 题号，如 `3.12`；章节页与上传页的下拉都按它排序 |
+| `slug` | 页面文件名，把 `id` 的点换成下划线，如 `3_12` |
+| `title` / `titleZh` | 列表页显示的短标签 |
+| `problem` / `problemZh` | 英文、中文题面，支持 Markdown 与 LaTeX |
+| `problemSource` | 填 `book` 时页面底部提示「题面由教材自动提取」 |
+| `reference` | 可选的教师参考思路：`{ "note": "标题", "body": "Markdown 正文" }` |
+| `tags` | 字符串数组，显示在题号后面 |
+
+改完跑 `npm run build`，再提交推送。
+
+### 3. 加一道新题
+
+复制一段 `exercises` 里的对象，改 `id` / `slug` / 题面即可。
+`id` 的数字部分必须连续，章节页的「上一题 / 下一题」按数组顺序走。
+
+### 4. 管理同学交上来的作业
+
+直接在 Supabase 的 Table Editor 里改 `submissions` 表：
+
+- `status` 改成 `withdrawn` 即撤下（公开页面不显示）
+- `feedback`、`grade` 写批语和等级，会显示在答案下方
+- 想先审后放：把 `data/course.json` 里的 `autoApprove` 改成 `false`，
+  新提交默认 `pending`，审过再改成 `verified`
 
 ## 目录结构
 
 ```
-.
-├── data/
-│   ├── course.json          # 章节、习题、题目、参考思路、后端配置
-│   └── answers.json         # 手工整理的答案（与服务器上的作业合并展示）
-├── assets/
-│   ├── css/site.css         # 设计系统：配色、字体、组件
-│   └── js/
-│       ├── site.js          # 迷你 Markdown + LaTeX 渲染、作业列表、站内搜索
-│       ├── backend.js       # 提交后端：Supabase 直传 / GitHub / 本地
-│       └── submit.js        # 提交表单：实时预览、附件、进度、成功反馈
-├── scripts/
-│   ├── build.mjs            # 静态站点生成器
-│   ├── serve.mjs            # 零依赖本地预览服务器
-│   ├── check-backend.mjs    # 接收服务器体检（用公钥，模拟同学）
-│   ├── moderate.mjs         # 老师批处理：列出 / 展示 / 撤下 / 删除
-│   ├── mock-backend.mjs     # 本地假后端，不需要注册就能试跑
-│   └── sync-submissions.mjs # 可选：把 GitHub Issues 同步成 answers.json
-├── supabase/schema.sql      # 表 + 行级权限 + 存储桶（粘进 SQL Editor 即可）
-├── submissions/             # 手工归档的附件
-└── .github/                 # 可选：GitHub Issue 表单与同步工作流
+assets/          站点样式与脚本（改界面看这里）
+  css/site.css
+  js/site.js     渲染、双语开关、附件、搜索
+  js/submit.js   上传页
+  js/backend.js  Supabase 读写
+chapters/        构建产物：每章目录 + 每道题一页
+data/course.json 题库与站点配置（唯一需要手工维护的数据）
+scripts/build.mjs 生成静态页面
+supabase/schema.sql 数据库结构与权限
+tools/           本地小工具
 ```
 
-生成出来的 `index.html`、`chapters/**` 都是**产物**，不要手改，
-改动会在下次 `npm run build` 时被覆盖。
-
-## 教师操作手册
-
-### 1. 修改站点信息
-
-编辑 `data/course.json` 顶部的 `site`。除了上面说的 `submission` 之外：
-
-```json
-{
-  "titleZh": "开放宏观经济学 · 习题解答库",
-  "description": "面向课程的习题解答库……",
-  "repo": "你的GitHub用户名/仓库名"
-}
-```
-
-`repo` 只影响页脚的仓库链接和讨论区入口，可以不填。
-
-### 2. 补一道题的题面与参考思路
-
-在 `data/course.json` 的 `chapters[].exercises[]` 里找到那道题，填两个字段：
-
-```json
-{
-  "id": "2.3",
-  "slug": "2_3",
-  "title": "An Open Economy with Habit Formation",
-  "problem": "考虑带有习惯形成的效用函数……\n\n**求**：最优消费的欧拉方程。",
-  "reference": {
-    "status": "sketch",
-    "note": "参考思路（并非唯一做法）",
-    "body": "**第一步**，把效用写成……"
-  },
-  "tags": ["习惯形成", "欧拉方程"]
-}
-```
-
-两个字段都支持 Markdown + LaTeX：
-
-- 行内公式 `$c_t = y_t - r d_{t-1}$`
-- 独立公式 `$$\mu_{t+1} = \frac{r}{1+r-\rho}\epsilon_{t+1}$$`
-- `**加粗**`、`- 列表`、`> 引用`、`` `代码` ``
-
-`reference` 留 `null` 就不显示「参考思路」板块。
-
-> ⚠️ **美元符号要转义。** 题面里的金额必须写成 `\$35,000`，
-> 否则排版引擎会把它和下一个 `$` 之间的内容当成公式。当前 161 道题
-> 都已经自动转义好了；你自己新加内容时记得这件事。
-
-### 3. 题面是从 PDF 自动提取的
-
-161 道题的题面来自教材 PDF 的自动提取，所以：
-
-- 每道题页面上都会提示「以教材原文为准」；
-- 复杂的**分式、上下标**偶尔会串位（例如把 $C_1^h$ 提取成 `C1 h`）；
-  遇到重要的题，建议手工把题面改成 LaTeX 写法。
-
-如果你希望**完全不展示题面**（只保留题号、标题和提交入口，让学生对照教材做题）——
-这在版权上也更保守——把 `data/course.json` 里的 `showProblemText` 改成 `false`
-再 `node scripts/build.mjs` 即可。
-
-### 4. 管理同学交上来的作业
-
-**在浏览器里改（最简单）**：Supabase 控制台左侧 **Table Editor → submissions**，
-点开任意一行直接编辑。最常用的就是改 `status`：
-
-| status | 网站上的样子 |
-| --- | --- |
-| `verified` | 精选解答（绿色，排最前） |
-| `peer` | 同学解答 |
-| `alternative` | 另一种思路 |
-| `pending` | 存着但不公开 |
-| `rejected` | 存着但不公开（用来「撤下」某条作业） |
-
-**在命令行批量处理**（需要 service_role key）：
+## 本地预览与构建
 
 ```bash
-$env:SUPABASE_URL="https://xxxx.supabase.co"
-$env:SUPABASE_SERVICE_ROLE_KEY="eyJhbGciOi..."
-
-node scripts/moderate.mjs list                  # 最近的作业
-node scripts/moderate.mjs list --status pending
-node scripts/moderate.mjs publish <id>          # 展示（默认精选）
-node scripts/moderate.mjs publish <id> --as peer
-node scripts/moderate.mjs hide <id>             # 从网站撤下，记录仍在
-node scripts/moderate.mjs rm <id>               # 彻底删除
+npm run build        # 生成 index.html / answers.html / submit.html / chapters/**
+npm run dev          # 本地预览 → http://localhost:4173
 ```
 
-### 5. 改成「先审后放」
-
-默认是提交即展示（`autoApprove: true`）。想改成老师先过一遍：
-
-1. `data/course.json` 里把 `autoApprove` 改成 `false`；
-2. `supabase/schema.sql` 里把插入策略那一行的
-   `status = 'verified'` 改成 `status = 'pending'`，重新在 SQL Editor 跑一次该策略；
-3. 重新 `npm run build`。
-
-之后新提交的作业会以 `pending` 存进数据库，只有你把它改成
-`verified` / `peer` / `alternative` 才会出现在网站上。
-
-### 6. 当前数据状态
-
-仓库里已经**没有任何示例答案**了：`data/answers.json` 是空的，
-`submissions/` 里只留下说明文件。网站上显示的作业全部来自同学提交
-（存在 Supabase 里），页面上的每道题在收到第一份作业之前都是空状态。
+改完 `data/course.json` 或 `scripts/`、`assets/` 里的东西，都要重新 build
+再提交，否则线上还是旧的。浏览器缓存较狠，本地预览记得 `Ctrl + F5`。
 
 ## 部署到 GitHub Pages
 
-1. 新建仓库并把本目录推上去：
+仓库 **Settings → Pages**：Source 选 `Deploy from a branch`，
+分支 `main`，目录 `/ (root)`，Save。等一两分钟即可。
 
-   ```bash
-   git init && git add . && git commit -m "init solutions site"
-   git remote add origin git@github.com:<你的用户名>/<仓库名>.git
-   git push -u origin main
-   ```
-
-2. 仓库 **Settings → Pages**：Source 选 `Deploy from a branch`，
-   Branch 选 `main`、目录选 `/ (root)`，保存。
-
-3. 等一两分钟，访问 `https://<用户名>.github.io/<仓库名>/`。
-
-网站用的是相对路径，放在子路径或自定义域名下都不需要额外配置。
-如果只想把静态页面放上去、接收服务器用 Supabase，到这一步就结束了——
-网站的构建产物已经提交进仓库，GitHub Pages 不需要跑任何构建。
-
-> 如果之后改过 `data/course.json` 或 `assets/`，记得在本机
-> `npm run build` 一次再推送，否则线上页面不会更新。
-
-## 站内搜索
-
-搜索框在右上角（快捷键 `/`），索引在构建时生成，覆盖所有章节、习题和每道题的作业数量。
-作业正文的全文检索在「全部作业」页面里。
+以后更新：改完 → `npm run build` → GitHub Desktop 里 Commit → Push。
 
 ## 已知限制
 
-- **公式不需要联网，而且是按需加载**：MathJax 放在 `assets/vendor/tex-svg.js`
-  （2 MB，线上 gzip 后约 670 KB），但只要页面上没出现公式就**不会下载**。
-  首页、章节页、题面没有公式的习题页因此省下了近 700 KB 的首屏流量；
-  同学在答案里写了 `$...$`，引擎会自动加载并排版。
-  想升级版本就重新下载同一个文件覆盖
-  （`https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js`）。
-- **题面是自动提取的**：分式、上下标偶有偏差，页面上有提示；可用
-  `showProblemText: false` 完全关闭题面展示。
-- **公开桶**：附件文件名带时间戳和随机串，不列出就猜不到，但拿到链接的人能打开。
-  需要严格保密的话，把 `schema.sql` 里的存储桶改成私有，并让同学改用「下载 .md」。
-- **没有防刷**：同一个同学可以重复提交（这也是「更正版本」需要的）。
-  要挡机器人，可以在 Supabase 前面挂 Cloudflare Turnstile。
-- **搜索是纯前端的**：几千条以内没问题；上万条建议换成 Pagefind。
-- **免费额度**：Supabase 免费版 500 MB 数据库 + 1 GB 存储。收作业绰绰有余；
-  如果要传视频，另找对象存储。
+- 题面由教材 PDF 自动提取，公式与上下标可能有偏差；以教材为准。
+- 内嵌 PDF 预览依赖浏览器的阅读器，个别内置浏览器（如代码编辑器的内置预览窗）
+  显示不出内容，用 Chrome/Edge 打开正常。
+- 讨论题没有唯一答案，站上展示的都是同学自己的解答，不是标准答案。
 
-## 许可与版权
+## 版权
 
-代码部分可自由使用。教材题目、图表与出版社材料的版权归原作者与 Princeton
-University Press 所有；本站只收录师生自己撰写的解答，请勿上传教材扫描页。
+题目文字版权归原作者与出版社所有，本站仅供本课程教学使用。
+建议不要把站点提交给搜索引擎收录。

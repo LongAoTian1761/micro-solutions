@@ -4,14 +4,14 @@
   "titleZh": "经济学的思维方式 · 课后讨论题与同学解答",
   "subtitle": "Heyne, Boettke & Prychitko, The Economic Way of Thinking, 13th ed.",
   "description": "面向本科微观经济学课程的课后讨论题题库：中英文对照，同学不需要注册就能直接上传自己的解答与附件，全班共享。",
-  "repo": "your-github-name/your-repo-name",
+  "repo": "LongAoTian1761/micro-solutions",
   "showProblemText": true,
   "submission": {
    "backend": "supabase",
    "githubRepo": "",
    "supabase": {
-    "url": "",
-    "anonKey": "",
+    "url": "https://dbxcqqaydzlbltjbtqgu.supabase.co",
+    "anonKey": "sb_publishable_qMYKzciaeSyznPk0rK8sRg_0fwXZrPa",
     "table": "submissions",
     "bucket": "answer-uploads",
     "maxFileMb": 20,
