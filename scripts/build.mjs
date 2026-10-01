@@ -428,6 +428,21 @@ for (const c of course.chapters) {
         </div>
       </div>`
       : `<div class="problem prose" data-md>${esc(e.problem)}</div>`;
+    /* 书里的插图：脱离图很多讨论题没法答，所以放在题面正上方 */
+    const figuresBlock = (e.figures || []).length
+      ? `<div class="problem-figures">` +
+        e.figures
+          .map(
+            (f) => `<figure class="problem-figure">
+          <a href="${prefix}/${escAttr(f.src)}" target="_blank" rel="noopener">
+            <img src="${prefix}/${escAttr(f.src)}" alt="${escAttr(f.caption)}" loading="lazy">
+          </a>
+          <figcaption>${esc(f.caption)}</figcaption>
+        </figure>`,
+          )
+          .join("") +
+        `</div>`
+      : "";
     const problemBlock = showProblem
       ? `<section class="block">
         <div class="block__head">
@@ -438,6 +453,7 @@ for (const c of course.chapters) {
             <button type="button" class="lang-switch__btn" data-lang-set="both">中英对照</button>
           </div>
         </div>
+        ${figuresBlock}
         ${problemBody}
         ${problemNote}
       </section>`

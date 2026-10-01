@@ -1304,6 +1304,36 @@ h3 {
   gap: 16px;
 }
 
+/* 教材插图：放在题面正上方 */
+.problem-figures {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.problem-figure {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  overflow: hidden;
+}
+
+.problem-figure img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  background: #fff;
+}
+
+.problem-figure figcaption {
+  padding: 6px 10px;
+  border-top: 1px solid var(--line);
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
 .problem-pair > .problem-line + .problem-line {
   border-top: 1px dashed var(--line);
   padding-top: 16px;

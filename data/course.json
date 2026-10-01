@@ -30,7 +30,7 @@
    "part": "",
    "partTitle": "",
    "partTitleZh": "",
-   "summary": "",
+   "summary": "从稀缺与选择出发：所有决策都在边际上做出，都要权衡预期收益与预期成本；产权是这局游戏的基本规则。",
    "exercises": [
     {
      "id": "1.1",
@@ -174,7 +174,7 @@
    "part": "",
    "partTitle": "",
    "partTitleZh": "",
-   "summary": "",
+   "summary": "区分免费商品、稀缺商品与负商品；说明自愿交换为何对双方都有利，用生产可能性曲线讲比较优势，以及中间人如何降低交易成本。",
    "exercises": [
     {
      "id": "2.1",
@@ -406,7 +406,7 @@
    "part": "",
    "partTitle": "",
    "partTitleZh": "",
-   "summary": "",
+   "summary": "稀缺商品必有替代品；讲清需求法则、需求与需求量的区别、需求曲线移动的原因，以及需求的价格弹性。",
    "exercises": [
     {
      "id": "3.1",
@@ -560,7 +560,13 @@
      "problem": "The graphs in Figure 3–2 show the demand for bus services (left) and the demand for downtown parking space (right) in an imaginary city. If the city raises bus fares from P to P , the demand curve will not change, but the quantity demanded will fall. With fewer people riding the bus, what will happen to the demand for downtown parking? What effect will this have on downtown parking rates? With higher parking rates, more people will want to ride the bus. So what effect will the higher bus fares have after all on the demand for bus service? Demand for bus service",
      "problemZh": "在一个虚构的城市中，对公共汽车服务的需求如图3-2（左）所示，对市中心停车位的需求如图3-2（右）所示。如果该市把公共汽车票的价格从P1提高到P2，需求曲线不会变化，但是对公共汽车票的需求量会下降。既然搭乘公共汽车的人数减少了，那么对市中心停车位的需求会如何变化？上述情况会如何影响市中心的停车费？停车费上涨以后，会有更多人愿意搭乘公共汽车。所以，总的来说，提高公共汽车票价对公共汽车服务的需求产生什么影响？图3-2：公共汽车服务和市中心停车位的需求曲线",
      "problemSource": "book",
-     "reference": null
+     "reference": null,
+     "figures": [
+      {
+       "src": "assets/figures/fig-3-2.png",
+       "caption": "Figure 3-2"
+      }
+     ]
     },
     {
      "id": "3.15",
@@ -648,7 +654,13 @@
      "problem": "Price elasticity of demand can be calculated by dividing the percentage change in the quantity demanded by the percentage change in the price. (a) What is the coefficient of elasticity between the two points of the demand schedule in each of the cases shown in Table 3–3? (b) If you divided 100 percent by 50 percent in the ticket case, and 50 percent by 100 percent in the coffee case, you got very different coefficients (2 and 0.5, respectively) for what are actually identical relative changes. The different results come from using the larger price and the smaller quantity as the base from which to calculate the percentage change in the ticket case, and using the smaller price and the larger quantity as the base in the coffee case. But the coefficient of elasticity should be the same between two points regardless of the direction in which the change is measured. How can this problem be handled? (c) What is the coefficient of elasticity in each of these cases if you use the average of the prices and quantities between which the change is occurring as the base for calculating the percentage changes? (d) In both cases, total expenditure (price times quantity) does not change when the price changes. What does this imply about the elasticity of demand between the prices given? Does this implication agree with your answer in (c)? (It should.)",
      "problemZh": "需求的价格弹性可以通过以下方法计算：价格弹性等于需求量变化的百分比除以价格变化的百分比。(a)表3-3中描述了两种商品的需求。这两种需求在表中两点间的弹性系数分别是多少？表3-3(b)在门票的例子中，弹性系数等于100%除以50%；在咖啡的例子中，弹性系数等于50%除以100%。你于是得到两个差别很大的弹性系数（分别是2和0.5）。然而，实际上在这两个例子中相对变化是完全一样的。之所以会得到不同的弹性系数，是因为在门票的例子中你用较高的价格和较低的需求量作为计算百分比变化时的基础，而在咖啡的例子中你用较低的价格和较高的需求量作为计算百分比变化时的基础。但是，不管价格朝什么方向变化，对于这两种商品而言，两点间的弹性系数应该一样。我们应该如何解决这个问题？(c)假设在计算百分比变化时你用两点间的平均价格和平均需求量作为基础，那么在票和咖啡的例子中弹性系数分别是多少？(d)在这两个例子中，总收入（价格乘以需求量）均不随价格变化而变化。这说明在我们给出的两个价格之间，需求的弹性具有怎样的性质？这个问题的答案是否与问题(c)的答案一致？（应该一致。）",
      "problemSource": "book",
-     "reference": null
+     "reference": null,
+     "figures": [
+      {
+       "src": "assets/figures/tab-3-3.png",
+       "caption": "Table 3-3"
+      }
+     ]
     },
     {
      "id": "3.23",
@@ -659,7 +671,13 @@
      "problem": "Figure 3–3 shows a hypothetical demand curve for strawberries. (a) What price per case would maximize the gross receipts of strawberry growers? [Peek at part (d) of this question rather than waste too much time trying all sorts of different prices. The price that maximizes gross receipts will be found at the midpoint of a straight-line E S A C R D E$40 P S E I R R 30 E B W A R 20 T S F O E C I R P (in thousands) Demand curve for strawberries demand curve when the curve is extended to the axes. If you see why, good. If not, it’s a bit of knowledge with only academic usefulness anyway.] (b) If the price of strawberries is determined by the total quantity harvested in conjunction with the demand, what size crop will result in the price quoted in part (d)? (c) What would the gross receipts of strawberry growers be if the crop turned out to be 30,000 cases? (d) Can you prove that the demand for strawberries is elastic above a price of $24 per case and inelastic below that price? (e) If strawberry growers can make more money by selling fewer than 30,000 cases, why would they ever market that much? Why wouldn’t they destroy some of the crop rather than “spoil the market?”",
      "problemZh": "图3-3是一条假想中的草莓需求曲线。图3-3：草莓的需求曲线(a)对于草莓种植户而言，若想将总收入最大化，每箱草莓应该卖多少钱？［不要浪费太多时间计算各种不同价格下的总收入，看一看本题的问题(d)。如果需求曲线是直线，那么将直线向两侧延长至与两轴相交，使总收入最大化的价格应该在这条线段的中点处。如果你能看出为什么，很好。假如你看不出为什么也没关系，反正这个知识点仅具有学术上的重要性。］(b)如果草莓的价格由总产量和需求共同决定，那么总产量为多少时会出现(d)中的价格？(c)如果产量是30000箱，那么草莓种植户的总收入是多少？(d)当每箱草莓的价格大于24美元时，对草莓的需求有弹性；当每箱草莓的价格小于24美元时，对草莓的需求缺乏弹性。你能否证明这一结论？(e)如果供应量小于30000箱时草莓种植户的收入反而更高，那他们为什么要向市场投放那么多草莓？他们为什么要“把市场弄糟”，而不是干脆销毁部分草莓？",
      "problemSource": "book",
-     "reference": null
+     "reference": null,
+     "figures": [
+      {
+       "src": "assets/figures/fig-3-3.png",
+       "caption": "Figure 3-3"
+      }
+     ]
     },
     {
      "id": "3.24",
@@ -682,7 +700,7 @@
    "part": "",
    "partTitle": "",
    "partTitleZh": "",
-   "summary": "",
+   "summary": "成本永远是「行动的代价」。区分沉没成本与边际成本，由机会成本推出供给曲线，并分析供给的移动与价格弹性。",
    "exercises": [
     {
      "id": "4.1",
@@ -913,7 +931,13 @@
      "problem": "The supply curve on the graph in Figure 4–4 shows the wage rates that would have to be offered by business firms to obtain various quantities of hours of envelope stuffing on any given day. (a) What wage rate will firms have to offer if they want to hire 400 hours of envelope stuffing? (b) What will be the firms’ total expenditure on the wages of envelope stuffers? (c) What will be the total opportunity cost to the envelope stuffers of stuffing envelopes? (Hint: Each square represents $20: 20 hours times $1.) (d) What is the price elasticity of supply between $4 and $6? Between $6 and $8?",
      "problemZh": "在任意一天中，企业若想获得一定数量的信封填装工时，最低必须支付的工资水平如图4-4中的供给曲线所示。图4-4：填装信封的供给曲线(a)如果企业希望获得400小时的信封填装工时，他们最低需要支付多高的小时工资？(b)企业付给信封填装员的总工资是多少？(c)信封填装员填装信封的总机会成本是多少？（提示：每一小格代表20美元，即1美元每小时乘以20小时。）(d)4美元到6美元之间的供给价格弹性是多少？6美元到8美元之间的供给价格弹性是多少？",
      "problemSource": "book",
-     "reference": null
+     "reference": null,
+     "figures": [
+      {
+       "src": "assets/figures/fig-4-4.png",
+       "caption": "Figure 4-4"
+      }
+     ]
     },
     {
      "id": "4.22",
@@ -936,7 +960,7 @@
    "part": "",
    "partTitle": "",
    "partTitleZh": "",
-   "summary": "",
+   "summary": "市场如何把数百万人的计划协调起来：短缺与过剩、价格如何出清市场、价格如何传递稀缺信息，以及货币与利率的角色。",
    "exercises": [
     {
      "id": "5.1",
@@ -1002,7 +1026,13 @@
      "problem": "Mastering the economic way of thinking means learning to reason in terms of supply and demand. Here are additional questions on which you can practice. Some are harder than others. You should probably begin in each case by sketching a small supply and demand graph. Then ask yourself whether the event described would affect the supply curve or the demand curve, in which direction the curve would move, and what effect that would have on the price and the quantity exchanged. Don’t be content merely to conclude that the price will rise or the price will fall. Would you expect a large or a small change in price or in the quantity exchanged? You will usually have to supply some information from your own experience. Keep in mind that the answer will often depend on the length of time you are allowing for adjustments to occur. Are you predicting a very short-run effect or are you thinking about the long-run effect? (a) What would happen to the market-clearing price of acoustic guitars in Figure 5–1 if (i) People turned on to some accordion craze and started losing interest in learning to play the guitar? (ii) The price of electric guitars were to fall substantially? (iii) A number of acoustic guitar makers decide to exit the market and make violins instead? (b) Suppose scientists discover that eating soybeans prevents cancer and heart disease. (i) What effect would you predict on the price of soybeans? (ii) What effect would you predict on the price of feed corn (which can usually be grown on land suitable for growing soybeans)? (c) What effect would you expect each of the following to have (or to have had) on the market for domestically grown cotton? (i) Nylon is invented. (ii) The cotton gin is invented. (iii) The boll weevil (a crop killer) becomes extinct. (iv) Foreign cotton growers bring in an exceptionally large harvest. (d) Suppose that all states adopt a serious no-fault rule to cover automobile accidents, so that it becomes impossible to sue for damages after an accident. (i) What effect would you predict on the cost of hiring a lawyer to draw up a will? (ii) If only one state moves to no-fault, what effect would you predict on the cost of hiring lawyers to draw up wills in that state? Would you expect a larger or smaller effect than in the preceding question? (e) Suppose the dental hygienists of the country persuade everyone to floss at least three times each day. What effect would you predict on the price of dental floss? (f) If it takes five times as much grain to provide a nourishing diet to people who run that grain through beef cattle before eating it than it takes to provide a nourishing diet to those who eat the grain directly, do those who eat beef cause hunger among poor people in the world? (g) Here is a somewhat different kind of question, one for which you obviously can’t supply information from your own experience. Suppose you discover that consumers are currently purchasing 20 times as many widgets as they were purchasing 10 years ago. Would you expect the price of a widget to be higher or lower today than it was 10 years ago? Under what circumstances would you expect it to be higher? Under what circumstances would you expect it to be lower? (h) What effect would you predict on the price of rental housing in an area if several major new employers set up operations in the area? (i) If the city council passes an ordinance requiring all apartment owners in a particularly congested area to provide one off-street parking place for each apartment that they rent out, what effect would you predict on the level of rents in that area and on the number of apartment units being rented? (j) If the city council did not require provision of parking spaces, but simply prohibited all on-street parking on the streets in this congested area, what effect would you predict on the level of rents in the area and on the number of apartment units being rented? (k) What effect would you predict on the price of gasoline if automobile manufacturers succeeded in doubling the number of miles that drivers can obtain per gallon? (l) As colleges and universities adopt more online testing programs, what effect would this have on the price of old-fashioned no. 2 pencils? Would you expect the price change to be small or quite large? What does that say about the price elasticity of supply of no. 2 pencils?",
      "problemZh": "要想深入掌握经济学的思维方式就得学会用供给和需求的概念讨论问题。你可以通过以下问题训练自己。部分问题比其他问题难度更高。在回答下面的每一小题时，你可能首先应该画出供给曲线和需求曲线。然后你应该问自己：本题中描述的情况如何影响供给曲线或需求曲线？供给或需求曲线朝什么方向移动？这种情况会如何影响价格和交易量？不要仅仅满足于回答价格会上升还是会下降。你认为价格或交易量的变化幅度是大还是小？通常答题时你需要根据自身经验自行补充额外信息。注意：答案常常取决于你给市场参与者多长时间进行调整。你是在预测超短期的影响还是在考虑长期的影响？(a)如果发生以下事件，图5-1中木吉他的市场出清价格会如何变化？(i)人们热衷于学拉手风琴，而对学弹吉他开始失去兴趣；(ii)电吉他的价格显著下降；(iii)一些木吉他制造者决定退出市场，改生产小提琴。(b)假设科学家发现食用大豆可以预防癌症和心脏病。(i)你认为此事会如何影响大豆的价格？(ii)你认为此事会如何影响饲料玉米（通常适合种大豆的土地也适合种饲料玉米）的价格？(c)你认为以下事件会对（或者已经对）国产棉花市场产生何种影响？(i)尼龙的发明；(ii)轧棉机的发明；(iii)棉铃虫（一种害虫）的灭绝；(iv)外国棉农获得大丰收。(d)假设美国所有州在处理车辆事故时都采用严格的“不追究过失”原则，在交通事故发生后起诉过失方赔偿损失因此变得不再可能。(i)你认为这会如何影响雇用律师起草遗嘱的成本？(ii)如果只有一个州改用“不追究过失”原则，你认为这会如何影响在该州雇用律师起草遗嘱的成本？你认为(ii)中的成本变化幅度比(i)中大还是小？(e)假设某国的口腔卫生专家建议所有人每天至少剔牙三次，那么你认为这种情况会对牙线的价格产生什么影响？(f)要想获得营养的饮食，可以直接吃谷物，也可以吃谷物喂养的牛肉。后者消耗的谷物是前者的5倍。世界上的穷人在挨饿，吃牛肉的人是否有责任？(g)此题与之前的题目有些不同，你显然无法从自身经验中获得额外的信息。假设你发现目前消费者购买的电脑应用程序的数量是10年前的20倍，那么你认为现在电脑应用程序的价格比10年前高还是低？在什么情况下你认为价格会高于10年前？在什么情况下你认为价格会低于10年前？(h)如果某区域新入驻了几家大型招工企业，你认为该区域内的房租会如何变化？(i)如果市政委员会出台法令规定某闹市区中的房东必须为每间出租公寓提供一个非沿街的停车位，你认为此举会如何影响该区的房租水平以及出租公寓的数目？(j)如果市政委员会不要求房东为住户提供停车位，但严禁在该闹市区的街边停车，你认为此举会如何影响该区的房租水平以及出租公寓的数量？(k)如果汽车制造商成功将每英里油耗减半，你认为这会对汽油价格产生什么影响？(l)大学越来越多地采用在线考试程序，你认为这会如何影响老式2B铅笔的价格？你认为铅笔价格会大幅变化还是小幅变化？这说明2B铅笔的供给价格弹性具有什么特点？",
      "problemSource": "book",
-     "reference": null
+     "reference": null,
+     "figures": [
+      {
+       "src": "assets/figures/fig-5-1.png",
+       "caption": "Figure 5-1"
+      }
+     ]
     },
     {
      "id": "5.7",
@@ -1201,7 +1231,7 @@
    "part": "",
    "partTitle": "",
    "partTitleZh": "",
-   "summary": "",
+   "summary": "规则塑造激励，激励改变行为。分析价格管控的后果，论证「生产成本通常由价格决定」，并列举误用供需分析的典型错误。",
    "exercises": [
     {
      "id": "6.1",
@@ -1333,7 +1363,13 @@
      "problem": "When people do not have to pay anything to use valuable resources, such as urban roadway space, they will continue using them until their value diminishes to zero. That often strikes people who have not yet become thoroughly familiar with the marginal way of thinking as wrong. Why would people choose to act in a way that caused the value of an activity— the value to themselves—to become zero? Their confusion arises from failure to realize that it is marginal value that diminishes to zero, and that this is very different from total or average value. Suppose you love chocolate chip cookies. It’s 10 o’clock in the morning, you’re quite hungry, and someone comes by selling freshly baked chocolate chip cookies. You peer into your psyche and discover your demand for chocolate chip cookies. You won’t pay more than $3 for a cookie, and you don’t want to eat more than four under any circumstances. (We rule out the possibility of storing them for eating later.) Table 6–1 below shows your demand schedule: (a) How many will you eat per day if the price is zero? (b) How much total value, measured in dollars per day, will you thereby obtain? (c) What will be the average value of the cookies to you, measured in dollars per cookie? (d) What will be the marginal value of cookies to you, measured in dollars per cookie, when they’re free to you? S D E 500 C I V R E S R E P 300 E E F SERVICES PER TIME PERIOD (in millions) Demand and supply for physicians’ services",
      "problemZh": "如果人们可以免费使用有价值的资源（比如城市道路空间），他们就会一直使用该资源，直到资源的价值降至零。不熟悉边际思维方式的人常常觉得上述论断是错误的。如果某种行为会让某项活动变得毫无价值（对他们自己的价值），那么人们为什么要选择采取这种行为？这些人之所以感到困惑，是因为他们没有认识到这里说的价值降至零是指边际价值降至零，边际价值与总体价值或平均价值很不一样。假设你很爱吃巧克力曲奇。现在是上午10点，你肚子很饿。有人来卖刚出炉的巧克力曲奇。你审视了一下自己的内心，发现你对巧克力曲奇有需求。每块曲奇你最多愿意付3美元，并且在任何情况下你都不愿意吃超过4块曲奇。（我们排除买下来留着以后吃的可能性。）表6-1列出了你的需求：表6-1(a)假设曲奇的价格是0，你每天会吃几块？(b)因此你每天获得的总价值（以美元为单位）是多少？(c)对你来说，每块曲奇的平均价值（单位是美元/块）是多高？(d)如果曲奇是免费的，那么对你来说曲奇的边际价值（单位是美元/块）是多高？",
      "problemSource": "book",
-     "reference": null
+     "reference": null,
+     "figures": [
+      {
+       "src": "assets/figures/tab-6-1.png",
+       "caption": "Table 6-1"
+      }
+     ]
     },
     {
      "id": "6.13",
@@ -1344,7 +1380,13 @@
      "problem": "Figure 6–5 portrays a supply curve of physicians’ services and a demand curve for those services. The market-clearing fee is $300. (a) To what position will the demand curve shift if the government agrees to pay the entire fee charged by physicians? What will consequently happen to the market-clearing price? (Hint: What quantity will people demand at a zero price?) (b) What will happen to the demand curve and to the market-clearing price if the government commits itself to pay one-half of physicians’ fees? (Hint: When the fee charged is $300, what is the fee paid by consumers? What quantity will they want to purchase at this price?) (c) What will be the market-clearing price if the government pays 80 percent of the fee charged by physicians?",
      "problemZh": "图6-5画出了医生服务的供给曲线和需求曲线。市场出清价格是300美元。图6-5：医生服务的供给和需求(a)如果政府同意全额报销医生向患者收取的费用，需求曲线会移动到什么位置？市场出清价格会随之发生怎样的变化？（提示：价格为零时，人们的需求量是多大？）(b)假设政府只承诺报销一半费用，需求曲线和市场出清价格会如何变化？（提示：当医生收取的总费用为300美元时，消费者支付的费用是多高？在这个价格下，消费者希望购买的服务量是多少？）(c)假设政府只承诺报销医生收费的80%，市场出清价格是多少？",
      "problemSource": "book",
-     "reference": null
+     "reference": null,
+     "figures": [
+      {
+       "src": "assets/figures/fig-6-5.png",
+       "caption": "Figure 6-5"
+      }
+     ]
     },
     {
      "id": "6.14",
@@ -1378,7 +1420,7 @@
    "part": "",
    "partTitle": "",
    "partTitleZh": "",
-   "summary": "",
+   "summary": "工资、租金、利息与利润的区别；会计利润与经济利润之别；企业家作为追求利润、承担余值的人，通过套利与创新协调市场。",
    "exercises": [
     {
      "id": "7.1",
@@ -1643,7 +1685,7 @@
    "part": "",
    "partTitle": "",
    "partTitleZh": "",
-   "summary": "",
+   "summary": "信息不完全时，价格是怎么被「找」出来的：价格、边际收入与边际成本的关系，以及差异化定价和成本加成定价的实践。",
    "exercises": [
     {
      "id": "8.1",
@@ -1676,7 +1718,13 @@
      "problem": "Locate the most profitable uniform price for sellers to set in each of the situations graphed in Figure 8–5, and the quantity they will want to produce and sell. Then shade the area that represents the addition to net income from that pricing policy. What will happen to net income in each case if the price is raised? If it’s lowered? (Caution: What happens if a seller whose marginal-revenue curve is the same as the demand curve raises the price?)",
      "problemZh": "请在图8-5的左右两图中分别找出令卖家利润最大化的单一价格以及此时的生产量（即销售量）。有一个区域代表这种定价策略能让净收入提高多少，请给这个区域打上阴影。在两幅图中如果卖方提价分别会对净收入产生什么影响？如果卖方降价呢？（注意：如果卖家的边际收入曲线与需求曲线是同一条曲线，那么卖家涨价会造成什么影响？）图8-5：找出令利润最大化的售价",
      "problemSource": "book",
-     "reference": null
+     "reference": null,
+     "figures": [
+      {
+       "src": "assets/figures/fig-8-5.png",
+       "caption": "Figure 8-5"
+      }
+     ]
     },
     {
      "id": "8.4",
@@ -1687,7 +1735,13 @@
      "problem": "The marginal-cost curves of the Anchorage Aardvark Breeding Company and the Houston Aardvark Breeding Company are identical, but the demand curves they face differ, as shown in Figure 8–6. (a) What price will each firm want to set? (b) Suppose something happens to raise marginal cost for each firm to $20 while nothing else changes. What price will each now set? (c) What is the relationship between elasticity of demand and the profitmaximizing percentage markup? MC D MR $ MC D = MR $ Finding the most profitable selling price",
      "problemZh": "安克雷奇土豚繁殖公司和休斯顿土豚繁殖公司的边际成本曲线一样，但需求曲线不一样。具体情况如图8-6所示。图8-6：两家公司的边际成本和需求曲线(a)两家公司分别会把价格定为多少？(b)假设某种因素令两家公司的边际成本都上升到20美元，其他条件保持不变。现在两家公司分别会把价格定为多少？(c)“需求的价格弹性”和“令利润最大化的利润百分比”之间的关系是什么？",
      "problemSource": "book",
-     "reference": null
+     "reference": null,
+     "figures": [
+      {
+       "src": "assets/figures/fig-8-6.png",
+       "caption": "Figure 8-6"
+      }
+     ]
     },
     {
      "id": "8.5",
@@ -1698,7 +1752,17 @@
      "problem": "Have you ever wondered why otherwise identical books usually sell for so much more in hardcover than in softcover editions? Surely it doesn’t cost that much more to attach a hard cover when it’s all being done on an assembly-line basis! This question tries to construct a plausible explanation, and to give you practice in working with the concepts of marginal cost and marginal revenue. Demand for Anchorage aardvarks Demand for Houston aardvarks Marginal cost MR Anchorage MR Houston Marginal cost and demand curves for two companies Some potential purchasers of a new book will be eager to obtain it as soon as it’s published and will be willing to pay a high price to do so. Those who want to give the book as a present may be willing to pay a high price to demonstrate their generosity, and may appreciate having a hard cover on the book as a sign of its quality. Still other potential purchasers—libraries are the clearest example—want hardcover books because they stand up better to heavy use; these purchasers are willing to pay a substantially higher price for a book to avoid the considerable expense of having to bind it themselves between hard covers. Libraries also will want to purchase a popular book right after it has been published in order to satisfy their eager patrons. There are also many potential purchasers, however, who want to read the book, would be willing to buy a copy if the price isn’t too high, and who don’t very much care whether it is in hard-cover or soft. The demand curve on the left-hand graph in Figure 8–7 portrays the kind of demand for the book that might emerge in such circumstances. The top segment of the demand curve is created by those willing to pay a premium to obtain the book quickly, or to get it between hard covers. Once the price falls below $20, “general readers” also become willing to purchase a copy. (The demand curve would not have such a sharp kink, but straight lines are easier to work with than curves.) Assume throughout that the marginal cost to the publisher of printing and shipping one more book is $4. (a) What would be the most profitable price for the publisher to set for the book? The marginal-revenue curves that correspond to each segment of the demand curve have been drawn for you, using the gimmick explained in Figure 8–3. (b) The most profitable price is the price that enables the publisher to sell all those copies, but only those copies for which marginal revenue is greater than marginal cost. The problem in this case is that –8 –16 Demand Demand –8 –16 COPIES PER EDITION (in thousands) Demand for hardcover edition Demand for softcover edition Marginal cost Marginal cost Marginal Marginal revenue revenue COPIES PER EDITION (in thousands) Marginal cost and demand curves for a book publisher in order to sell the units from 16,000 to 24,000, for which marginal revenue exceeds marginal cost, the publisher must also sell the units between 12,000 and 16,000, for which marginal revenue is less than marginal cost. Which is the more profitable place to stop? Should the publisher set the price at $28 and sell 12,000, or set the price at $16 and sell 24,000? (c) Suppose the publisher puts a hard cover on the book when it’s first published, then waits six or eight months before bringing the book out in a paperback edition at a lower price. What prices should it set for each edition? A reasonable approach would be to assume that all prospective purchasers at prices above $20 either are not willing to wait or want the hardcover edition, while those below $20 are willing to wait and to accept the paperback edition. To calculate the prices to set for each edition, you must first separate the two demand curves. Cut the lower section of the demand curve from the upper section and drag it to the left so that it begins at the price axis; it will then show the quantity of softcover books that will be demanded at various prices when the paperback edition is published. This has been done for you on the right-hand graph in Figure 8–7. Draw the marginal-revenue curve for each demand curve, find out where marginal revenue crosses marginal cost in each market, and set the appropriate prices.",
      "problemZh": "你有没有想过这样一个问题：同一本书的精装本为什么常常比平装本贵那么多？给图书配的一个硬质封皮不过是流水线上就能完成的工作，这不可能给出版社增加那么多成本！本题的目标是对上述现象进行合理解释，并且让你练习用边际成本和边际收入的概念分析问题。在一本书的消费者中，有一部分人在新书刚出版时就迫不及待地想买一本，他们愿意为了抢先尝鲜支付高价。另一些人买书是为了送人，他们愿意付高价显示自己的慷慨，精装本看起来更上档次，所以他们可能更喜欢精装本。还有一些消费者（最明显的例子是图书管理员）想买精装本是因为精装本更耐用；虽然精装本比平装本贵得多，但自己给图书装上硬质封面的成本更高，所以他们宁愿多付钱买精装本。图书管理员还希望在畅销书刚出版时就把书买到手，这样能满足那些迫切想读新书的客户的需求。但除此之外也有许多潜在消费者虽然想读这本书，却只有价格不太高的时候才愿意买，他们不太在乎书的封皮是软是硬。在这种情况下，书的需求曲线如图8-7的左图所示。想要尽早读到这本书或者想要硬质封皮的消费者创造了需求曲线的上半部分。如果书的售价低于20美元，那么“普通读者”也愿意买一本（在实际中需求曲线的转角不会这么尖锐，但是分析直线比分析曲线容易，所以我们把需求曲线画成这样）。本题的所有小题都假设出版社多印一本书并把这本书运到读者手中的边际成本是4美元。图8-7：一家图书出版公司的边际成本和需求曲线(a)出版社把每本书的价格定为多少时利润最高？我们已经用图8-3中提过的小窍门帮你画出了每段需求曲线对应的边际收入曲线。(b)使利润最大化的价格应该让出版社能卖出（且仅能卖出）所有预期边际收入大于边际成本的书。问题在于为了卖出第16000本书到第24000本书（这部分书的边际收入超过边际成本），出版社必须先卖出第12000本书到第16000本书（这部分书的边际收入低于边际成本）。到底在销售量达到多少时停止卖书利润更高？出版社是应该把每本书的价格定为28美元，卖出12000本书，还是应该把每本书的价格定为16美元，卖出24000本书？(c)假设这本书刚出版时出版社只发行精装本，6至8个月后才发行价格更低的平装本，精装本和平装本分别应该定多高的价格？一种合理的做法是假设所有出价超过20美元的消费者都不愿意等6到8个月或者都更喜欢精装本，而所有出价低于20美元的消费者都愿意等一段时间再买平装本。为了计算精装本和平装本的最佳定价，你首先必须把这两条需求曲线区分开来。把需求曲线的上半段和下半段切开，将下半段向左移动，让它从价格轴开始，这样我们就得到平装本的需求曲线。从这条曲线可以看出平装本出版后在不同的价格上消费者对平装本的需求量。我们已经在图8-7的右图中帮你把这些都画好了。请你先画出每条需求曲线对应的边际收入曲线，然后找出两个市场中的边际收入曲线分别在哪里与边际成本曲线相交，最后设定精装本和平装本的合理价格。",
      "problemSource": "book",
-     "reference": null
+     "reference": null,
+     "figures": [
+      {
+       "src": "assets/figures/fig-8-3.png",
+       "caption": "Figure 8-3"
+      },
+      {
+       "src": "assets/figures/fig-8-7.png",
+       "caption": "Figure 8-7"
+      }
+     ]
     },
     {
      "id": "8.6",
@@ -1886,7 +1950,7 @@
    "part": "",
    "partTitle": "",
    "partTitleZh": "",
-   "summary": "",
+   "summary": "竞争的两种含义；企业用来限制竞争的手段；「低于成本销售」与掠食性定价是否真的反竞争，以及反托拉斯政策的意图与实际差距。",
    "exercises": [
     {
      "id": "9.1",
@@ -2063,7 +2127,7 @@
    "part": "",
    "partTitle": "",
    "partTitleZh": "",
-   "summary": "",
+   "summary": "正负外部效应的定义；协商、裁决、立法三条解决路径；污染政策、用定价缓解拥堵，以及交易成本如何妨碍问题的解决。",
    "exercises": [
     {
      "id": "10.1",
@@ -2316,7 +2380,13 @@
      "problem": "Assume that the graph in Figure 10–1 shows how much it costs per year per car to reduce undesirable automobile emissions by various percentages through mandatory exhaust-control devices. (a) Why does the curve rise slowly at first and increase more rapidly as emission levels decline? Is this a peculiar characteristic of automobile exhaust-control systems, or is it a more general relationship? $ 0 50% 100% Costs of reducing automobile emissions (b) Does this curve tell us how much emissions ought to be reduced? Does it provide any guidance at all to those who make public policy in this area? (c) If you think of this curve as the marginal cost of supplying cleaner air, what kind of data would you want in order to construct the demand for cleaner air? What would be the significance of the intersection between these two curves? (d) Suppose you want to find out how much people in your area value cleaner air. So you commission a survey in which people are asked how much they would be willing to pay in order to obtain various levels of reduction in the amount of noxious automobile emissions in their community. Can you generally count on them to tell the truth? Remember that they know they won’t be held to their valuation— that is, they won’t actually be required to pay what they say they would be willing to pay. What are the major sources of bias in such a survey procedure? (e) Suppose that your survey is done for the government and that the people whom you ask know they will actually be required to pay an annual tax equal to the amount they say they are willing to pay for whatever level of reductions is finally decided on and enforced. What sort of bias will this introduce into your measurement of the community demand for cleaner air?",
      "problemZh": "强制车辆安装尾气控制设备可以减少尾气排放。将尾气排放量减少一定百分比产生的成本（每年、每辆车）如图10-1所示。图10-1：减少汽车尾气的成本(a)随着尾气排放量的减小，成本曲线一开始缓慢上升，后来开始加速上升。为什么会这样？这种形状是汽车尾气控制系统的特殊性质造成的，还是一种普遍存在的关系？(b)这条曲线能否告诉我们应该把尾气排放减少百分之多少？这条曲线是否能为该领域的公共政策制定者提供任何指导？(c)假如你认为这条曲线是提供清洁空气的边际成本曲线，那么你还需要什么数据才能画出清洁空气的需求曲线？这两条曲线的交点具有何种重要性？(d)假设你想知道你所在区域的居民赋予清洁的空气多高的价值，因此你做了一项调查。调查的问题是：假如付钱就能降低社区中的汽车有毒尾气排放量，那么对各种减排百分比你分别愿意付多少钱？你觉得一般来说受访者会说实话吗？记住，他们回答问卷不需要负责任——也就是说，不管他们说自己愿意付多少钱，实际上他们并不需要缴纳这笔钱。上述调查程序的主要偏差是什么？(e)假设你代表政府进行这项调查。受访者知道政府最终会选择一个减排百分比并强制执行，而他们每年需要支付一笔税金，金额等于他们在问卷中称自己愿意为该减排百分比支付的金额。你想度量社区对清洁空气的需求，你的调查方式会给这种度量引入什么偏差？",
      "problemSource": "book",
-     "reference": null
+     "reference": null,
+     "figures": [
+      {
+       "src": "assets/figures/fig-10-1.png",
+       "caption": "Figure 10-1"
+      }
+     ]
     },
     {
      "id": "10.24",
@@ -2339,7 +2409,7 @@
    "part": "",
    "partTitle": "",
    "partTitleZh": "",
-   "summary": "",
+   "summary": "政府官员同样面对自己的边际收益与边际成本；强制与说服的区别、搭便车与公共商品，以及「理性无知」如何塑造政治过程的结果。",
    "exercises": [
     {
      "id": "11.1",
@@ -2571,7 +2641,7 @@
    "part": "",
    "partTitle": "",
    "partTitleZh": "",
-   "summary": "",
+   "summary": "生产性服务的供求如何决定收入；人力资本与产权的作用；竞争和工会限制如何影响工资，以及美国的收入不平等与再分配的困难。",
    "exercises": [
     {
      "id": "12.1",
@@ -2659,7 +2729,13 @@
      "problem": "In what sense do relative prices reflect relative value? Here is a question to help you think about it. Suppose that the average wage of a hairdresser is twice the average wage of a child-care worker, and that prompts the following comment: “By paying hairdressers twice as much as child-care workers, this society is saying that people who cater to human vanity are twice as valuable as people who care for our children.” Is that true in the situation summarized in Figure 12–1? D portrays the hd demand for hairdressers and D the demand for child-care workers. S ccw hd portrays the supply of qualified hairdressers and S the supply of qualiccw fied child-care workers. The market-clearing wage is $20 for hairdressers and $10 for child-care workers. (a) In what sense precisely is a hairdresser worth twice as much as a child-care worker in this society? (b) The demand for child-care workers seems to be considerably greater than the demand for hairdressers. Why then do hairdressers command twice as high a wage? (c) Do the supply curves tell us anything about the relative value people place on styling hair versus caring for children? If the social esteem attached to a particular job increases, what effect will this have on the supply of qualified people willing to work at that job? What effect will that have in turn on the market-clearing wage rate for the job? (d) Use the information provided on the graph to make an argument that this society in fact places more than twice as much monetary value on the services of child-care workers than it places on the services of hairdressers. $60 D ccw D hd S 30 hd S ccw",
      "problemZh": "相对价格能在多大程度上反映相对价值？以下的题目能帮助你思考这个问题。假设美发师的平均工资是幼儿保育员的两倍。有人评论道：“社会付给美发师的工资是幼儿保育员的两倍，这说明我们的社会认为满足人们虚荣心的人的价值是教养我们的孩子的人的两倍。”图12-1中总结的情况说明上述评论是否成立？Dhd是对美发师的需求，Dccw是对幼儿保育员的需求，Shd是美发师的供给，Sccw是合格幼儿保育员的供给。美发师的市场出清工资是20美元，幼儿保育员的市场出清工资是10美元。图12-1(a)“在这个社会中，美发师的价值是幼儿保育员的两倍”这句话究竟在何种意义下成立？(b)对幼儿保育员的需求似乎比对美发师的需求高得多，那么为什么美发师的工资会是幼儿保育员的两倍？(c)“人们对美发和照顾儿童的相对价值有何看法？”供给曲线究竟能不能回答这个问题？如果社会对某种工作的评价提高了，那么具备资格且愿意从事该工作的劳动者的供给会受什么影响？这种工作的市场出清工资会因此受什么影响？(d)请用图中提供的信息论述以下观点：“事实上，社会赋予幼儿保育服务的金钱价值是美发服务的两倍以上。”",
      "problemSource": "book",
-     "reference": null
+     "reference": null,
+     "figures": [
+      {
+       "src": "assets/figures/fig-12-1.png",
+       "caption": "Figure 12-1"
+      }
+     ]
     },
     {
      "id": "12.9",
@@ -2770,7 +2846,7 @@
    "part": "",
    "partTitle": "",
    "partTitleZh": "",
-   "summary": "",
+   "summary": "GDP 包含什么、不包含什么，怎么算，和 GNP 有何区别；失业人口的界定与统计；这些总量随时间波动的性质与美国的历史经验。",
    "exercises": [
     {
      "id": "13.1",
@@ -3035,7 +3111,7 @@
    "part": "",
    "partTitle": "",
    "partTitleZh": "",
-   "summary": "",
+   "summary": "货币如何出现、如何演变为银行票据；现代经济中的货币创造过程；美联储如何管理商业银行系统、用哪些工具影响超额准备金。",
    "exercises": [
     {
      "id": "14.1",
@@ -3201,7 +3277,7 @@
    "part": "",
    "partTitle": "",
    "partTitleZh": "",
-   "summary": "",
+   "summary": "「不可持续的经济繁荣」与衰退，以及它与企业家错误决策的关系；货币政策和财政政策在什么条件下才真的能稳定经济。",
    "exercises": [
     {
      "id": "15.1",
@@ -3245,7 +3321,13 @@
      "problem": "Your authors have used a couple metaphors to describe the cycle—one was the bite, chew, choke found in Figure 15–1. The other one— misdirection caused by too many green lights turned on thanks to government intervention—ties into our discussion of traffic, signals, and rules that go all the way back to the beginning of chapter 1. (The green light metaphor first appeared in Steven Horwitz and Peter Boettke, The House that Uncle Sam Built [Foundation for Economic Education, 2009]—just do a Google search.) Here’s another one we like (which is not original to us): Think of the boom as the Fed secretly spiking the punch bowl at a party. The guests have a grand time as the night advances, without realizing that they’re drunk. But at some point the equivalent of the crash—the hangover—is inevitable as the body reacts to and corrects itself from the alcohol-fueled boom. How might the pain of the hangover be resisted? (Hint: think “hair of the dog.”)",
      "problemZh": "作者用一些比喻来描述经济周期，其中之一是“咬下、咀嚼、噎住”的比喻（见图15-1）。另一个关于政府干预的比喻是如果绿灯太多，交通就会出问题，这与第1章开头关于交通、信号灯和交通规则的讨论有关。［绿灯的比喻首见于史蒂夫·霍维茨(StevenHorwitz)和彼得·勃特克(PeterBoettke)所著的《山姆叔叔建造的房屋》(TheHousethatUncleSamBuilt,FoundationforEconomicEducation,2009)——读者在网上搜一下就能找到。］还有另外一个比喻我们也很喜欢（这个比喻可是我们原创的）：美联储就像派对的主人，他悄悄地在装潘趣酒的碗里多加了一些酒精，这便带来了一个经济繁荣期。夜越来越深，客人们玩得很开心，浑然不知自己已经喝醉了。但是，到了某一个时候（对应于经济危机发生的时刻），客人们会不可避免地被宿醉困扰，因为身体必然会对酒精做出反应，也会自动修正酒精促成的繁荣。那么怎么解决宿醉带来的痛苦呢？（提示：有人解决宿醉的办法是第二天再喝些酒。）",
      "problemSource": "book",
-     "reference": null
+     "reference": null,
+     "figures": [
+      {
+       "src": "assets/figures/fig-15-1.png",
+       "caption": "Figure 15-1"
+      }
+     ]
     },
     {
      "id": "15.5",
@@ -3422,7 +3504,7 @@
    "part": "",
    "partTitle": "",
    "partTitleZh": "",
-   "summary": "",
+   "summary": "全球经济增长的历史与成因；经济自由指数；比较各国 GDP 时遇到的困难；关于全球化的主要论点与证据。",
    "exercises": [
     {
      "id": "16.1",
