@@ -1,0 +1,20 @@
+{
+  "name": "economic-way-of-thinking-solutions",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "《经济学的思维方式》课后讨论题双语解答库：同学免注册上传答案与附件。",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/serve.mjs",
+    "sync": "node scripts/sync-submissions.mjs",
+    "mock-backend": "node scripts/mock-backend.mjs",
+    "check-backend": "node scripts/check-backend.mjs",
+    "grade": "node scripts/grade-ui.mjs",
+    "moderate": "node scripts/moderate.mjs",
+    "preview": "npm run build && npm run dev"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
