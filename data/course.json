@@ -5,6 +5,7 @@
   "subtitle": "Heyne, Boettke & Prychitko, The Economic Way of Thinking, 13th ed.",
   "description": "面向本科微观经济学课程的课后讨论题题库：中英文对照，同学不需要注册就能直接上传自己的解答与附件，全班共享。",
   "repo": "LongAoTian1761/micro-solutions",
+    "stats": {"label": "本学期", "start": "2026-09-01", "end": "2027-01-15"},
   "showProblemText": true,
   "submission": {
    "backend": "supabase",
