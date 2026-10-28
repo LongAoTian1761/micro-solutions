@@ -360,7 +360,7 @@ for (const c of course.chapters) {
       return `      <li>
         <a class="exercise-row" href="${e.slug}.html">
           <span class="exercise-row__num">${esc(e.id)}</span>
-          <span class="exercise-row__title">${esc(e.title)}${
+          <span class="exercise-row__title">${esc(e.title?.trim() || `习题 ${e.id}`)}${
             e.titleZh ? `<em>${esc(e.titleZh)}</em>` : ""
           }${
             e.tags && e.tags.length
